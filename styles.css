@@ -1,0 +1,326 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-family:'Montserrat', sans-serif;
+    overflow-x:hidden;
+    color:white;
+
+    /* FONDO COLORIDO MEXICANO */
+    background:
+    linear-gradient(135deg,
+    #d62828,
+    #f77f00,
+    #fcbf49,
+    #2a9d8f,
+    #006d77,
+    #9d4edd);
+
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+}
+
+/* ANIMACION FONDO */
+
+@keyframes bgMove{
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* CONTENEDOR */
+
+.main{
+    max-width:760px;
+    margin:auto;
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(4px);
+}
+
+/* BORDE FLORAL */
+
+.floral{
+    position:absolute;
+    left:0;
+    top:0;
+    width:70px;
+    height:100%;
+    background:url('flores.jpg');
+    background-size:cover;
+    z-index:5;
+}
+
+/* DECORACION */
+
+.circle1{
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:#ff006e;
+    border-radius:50%;
+    top:-120px;
+    right:-120px;
+    opacity:.25;
+}
+
+.circle2{
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:#06d6a0;
+    border-radius:50%;
+    bottom:-100px;
+    left:-100px;
+    opacity:.25;
+}
+
+/* MUCHAS FLORES */
+
+.flor{
+    position:absolute;
+    top:-150px;
+    font-size:30px;
+    animation:fall linear infinite;
+    opacity:.9;
+    z-index:20;
+}
+
+/* POSICIONES DIFERENTES */
+
+.flor:nth-child(1){ left:5%; animation-duration:8s; }
+.flor:nth-child(2){ left:12%; animation-duration:10s; animation-delay:1s; }
+.flor:nth-child(3){ left:20%; animation-duration:12s; animation-delay:2s; }
+.flor:nth-child(4){ left:28%; animation-duration:9s; animation-delay:3s; }
+.flor:nth-child(5){ left:36%; animation-duration:11s; animation-delay:1s; }
+.flor:nth-child(6){ left:44%; animation-duration:13s; animation-delay:2s; }
+.flor:nth-child(7){ left:52%; animation-duration:10s; animation-delay:4s; }
+.flor:nth-child(8){ left:60%; animation-duration:12s; animation-delay:1s; }
+.flor:nth-child(9){ left:68%; animation-duration:8s; animation-delay:2s; }
+.flor:nth-child(10){ left:76%; animation-duration:14s; animation-delay:3s; }
+.flor:nth-child(11){ left:84%; animation-duration:11s; animation-delay:1s; }
+.flor:nth-child(12){ left:92%; animation-duration:9s; animation-delay:2s; }
+
+@keyframes fall{
+
+    0%{
+        transform:
+        translateY(-150px)
+        rotate(0deg);
+    }
+
+    100%{
+        transform:
+        translateY(120vh)
+        rotate(360deg);
+    }
+}
+
+/* CONTENIDO */
+
+.content{
+    position:relative;
+    z-index:10;
+    padding:70px 45px;
+    text-align:center;
+}
+
+/* TITULO */
+
+h1{
+    font-family:'Great Vibes', cursive;
+    font-size:82px;
+    color:#ffe066;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,.4),
+    0 0 20px rgba(255,208,0,.5);
+}
+
+.subtitle{
+    margin-top:10px;
+    font-size:18px;
+    letter-spacing:4px;
+}
+
+/* FOTO */
+
+.photo{
+    width:85%;
+    max-width:430px;
+
+    margin:35px auto;
+
+    border-radius:30px;
+    overflow:hidden;
+
+    border:6px solid rgba(255,255,255,.5);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.4),
+    0 0 25px rgba(255,255,255,.2);
+
+    animation:float 4s ease-in-out infinite;
+}
+
+.photo img{
+    width:100%;
+    display:block;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* TEXTO */
+
+.invite-text{
+    margin-top:25px;
+    line-height:2;
+    font-size:21px;
+}
+
+/* INFO */
+
+.info-box{
+
+    margin-top:35px;
+
+    background:rgba(255,255,255,.15);
+
+    padding:30px;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.25);
+}
+
+.info-item{
+    margin:18px 0;
+    font-size:20px;
+}
+
+.highlight{
+    color:#ffe066;
+    font-weight:bold;
+}
+
+/* QR */
+
+.qr-section{
+    margin-top:45px;
+}
+
+.qr-text{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.qr-section img{
+    width:150px;
+    background:white;
+    padding:10px;
+    border-radius:20px;
+}
+
+/* BOTON */
+
+.whatsapp-btn{
+    margin-top:40px;
+}
+
+.whatsapp-btn a{
+
+    text-decoration:none;
+
+    background:linear-gradient(
+    45deg,
+    #25D366,
+    #1ebe5d);
+
+    color:white;
+
+    padding:18px 38px;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    display:inline-block;
+
+    transition:.3s;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.35);
+}
+
+.whatsapp-btn a:hover{
+
+    transform:
+    scale(1.08);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.4);
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:40px;
+    font-size:18px;
+    color:#fff3b0;
+}
+
+
+.btn-ubicacion{
+    margin-top:25px;
+    text-align:center;
+}
+
+.btn-ubicacion a{
+    display:inline-block;
+    padding:16px 32px;
+    background:linear-gradient(45deg,#ff006e,#ffbe0b);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.btn-ubicacion a:hover{
+    transform:scale(1.08);
+}
