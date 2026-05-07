@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
 
 });
 
-/* backup: si el usuario toca la pantalla */
+
 document.body.addEventListener("click", () => {
     music.play();
 }, { once:true });
